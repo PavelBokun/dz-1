@@ -38,14 +38,14 @@ const FriendMessage = (props: {message: MessageType}) => {
 
             {/**/}
           </div>
-          <pre
+          <p
             id={"hw1-friend-text-" + props.message.id}
             className={s.friendMessageText}
           >
             {props.message.message.text}
 
             {/**/}
-          </pre>
+          </p>
         </div>
       </div>
       <div id={"hw1-friend-time-" + props.message.id} className={s.friendTime}>

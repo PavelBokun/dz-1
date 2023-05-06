@@ -10,6 +10,7 @@
 .imageAndText img {
     
   width: 48px;
+  height: 48px;
   /* display: flex;
 flex-direction: row-reverse; */
 }
@@ -60,6 +61,8 @@ flex-direction: row-reverse; */
   padding-right: 5px;
 
   color: #ffffff;
+  word-break: break-all;
+    max-width: 600px;
 }
 
 .time {

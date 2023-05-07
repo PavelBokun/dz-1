@@ -17,6 +17,13 @@
 }
 
 .button {
+    width: 40px;
+    height: 20px;
+    background-color: rgb(213, 222, 186);
+    border-radius: 5px;
+    border:solid 1px black;
+    font-weight: bold;
+    
 }
 
 .button:focus {

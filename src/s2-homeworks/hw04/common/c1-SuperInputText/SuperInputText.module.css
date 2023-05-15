@@ -11,10 +11,12 @@
 }
 
 .errorInput {
+    border-color: red;
 }
 
 .errorInput:focus {
 }
 
 .error {
+    color:red;
 }

@@ -1,36 +1,55 @@
 .button {
+    width: 70px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: aqua;
 }
 
 .disabled {
 }
 
 .secondary {
-}
+    background-color: blue;
+    width: 100px;
+    height: 20px;
+    }
 
 .default {
+    background-color: blue;
+    color:white;
 }
 
 .red {
+    background-color: red;
+    color:white;
 }
 
 .default:hover {
+    background-color: darkolivegreen;
 }
 
 .red:hover {
+    background-color: rgb(237, 34, 20);
 }
 
 .secondary:hover {
+    background-color: rgba(29, 115, 213, 0.696);
+    
 }
 
 
 .default:active {
+background-color: cornflowerblue; 
 }
 
 .secondary:active {
-}
+    background-color: aqua;
+    }
 
 .red:active {
+    background-color:rgb(242, 39, 147) ;
 }
 
 .button:disabled {
+    background-color: rgb(96, 108, 109,0.5);
 }

@@ -42,3 +42,8 @@
     font-family: 'Montserrat', sans-serif;
     color: #06c;
 }
+.red{
+    background-color: red;
+    color:red;
+    width: 20px;
+}

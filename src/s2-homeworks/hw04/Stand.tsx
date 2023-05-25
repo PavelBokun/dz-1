@@ -3,6 +3,8 @@ import s from './Stand.module.css'
 import SuperInputText from './common/c1-SuperInputText/SuperInputText'
 import SuperCheckbox from './common/c3-SuperCheckbox/SuperCheckbox'
 import SuperButton from './common/c2-SuperButton/SuperButton'
+import Checkbox from '@mui/material/Checkbox/Checkbox'
+import pink from '@mui/material/colors/pink'
 
 const Stand = () => {
     const [stateForAllInputs, setValue] = useState<string>('')
@@ -92,6 +94,23 @@ const Stand = () => {
                         checked={stateForAllCheckboxes}
                         onChange={(e) => setChecked(e.currentTarget.checked)}
                     />
+                    <div>
+                        
+                    <Checkbox  defaultChecked />
+<Checkbox  defaultChecked color="secondary" />
+<Checkbox  defaultChecked color="success" />
+<Checkbox  defaultChecked color="default" />
+<Checkbox
+  
+  defaultChecked
+  sx={{
+    color: pink[800],
+    '&.Mui-checked': {
+      color: pink[600],
+    },
+  }}
+/>
+                    </div>
                 </div>
             </div>
         </div>

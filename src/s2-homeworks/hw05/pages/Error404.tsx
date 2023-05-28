@@ -6,6 +6,7 @@ const Error404 = () => {
         <div id={'hw5-page-404'}>
             <div className={s.wrapper}>
                 <img src={error404} alt={'404'} className={s.error404} />
+                <span>sorri</span>
             </div>
         </div>
     )

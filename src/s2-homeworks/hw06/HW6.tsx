@@ -4,22 +4,25 @@ import { restoreState, saveState } from './localStorage/localStorage'
 import s2 from '../../s1-main/App.module.css'
 import SuperButton from '../hw04/common/c2-SuperButton/SuperButton'
 import s from './HW6.module.css'
+import { Button } from '@mui/material'
 
 /*
  * 1 - в файле SuperEditableSpan.tsx дописать логику функций onEnterCallback, onBlurCallback, onDoubleClickCallBack
  * 2 - дописать логику функции restore
  * 3 - сделать стили в соответствии с дизайном
  */
+ 
 
 const HW6 = () => {
     const [value, setValue] = useState<string>('')
-
+ const [saves,setSave]=useState()
     const save = () => {
         saveState<string>('hw6-editable-span-value', value)
     }
     const restore = () => {
         // делают студенты
-
+     let rez= restoreState<string>('hw6-editable-span-value', value)
+     setValue(rez)
     }
 
     return (
@@ -41,6 +44,7 @@ const HW6 = () => {
                 </div>
 
                 <div className={s.buttonsContainer}>
+                    
                     <SuperButton id={'hw6-save'} onClick={save}>
                         Save to ls
                     </SuperButton>
@@ -51,6 +55,7 @@ const HW6 = () => {
                     >
                         Get from ls
                     </SuperButton>
+                    {/* <Button color="secondary"variant="contained" id={'hw6-restore'}>Material ui button</Button> */}
                 </div>
             </div>
         </div>

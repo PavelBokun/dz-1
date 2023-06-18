@@ -5,10 +5,15 @@
 }
 
 .hw {
+    display: flex;
+    flex-direction: column;
+    color:black;
+    font-size: 24px;
     
 }
 
 .hwTitle {
-color: blue;
-font-size: large;
+color: black;
+font-size: 38px;
+font-weight: bold;
 }

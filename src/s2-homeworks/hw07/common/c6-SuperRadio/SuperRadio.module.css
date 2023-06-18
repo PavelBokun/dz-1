@@ -1,4 +1,7 @@
 .radio {
+    
+    display: flex;
+    flex-direction: column;
 }
 
 .radio::before {
@@ -6,9 +9,14 @@
 
 
 .radio:checked::before {
+    color:black
 }
 
 .label {
+    padding: 2px;
+    display: flex;
+    margin-left: 100px;
+    /* justify-content:center; */
 }
 
 .options {

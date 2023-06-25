@@ -36,20 +36,28 @@ const HW8 = () => {
     const sortUp = () => {
         setPeople(
             homeWorkReducer(initialPeople, {type: 'sort', payload: 'up'})
-        ) // в алфавитном порядке a.name > b.name
+        )
+        initialPeople.sort((a,b)=>a.name.localeCompare(b.name) )
+        // в алфавитном порядке a.name > b.name
         setCurrentSort('up')
     }
 
     const sortDown = () => {
         setPeople(
             homeWorkReducer(initialPeople, {type: 'sort', payload: 'down'})
-        ) // в обратном порядке a.name < b.name}
+        )
+        initialPeople.sort((a,b)=>b.name.localeCompare(a.name) )
+         // в обратном порядке a.name < b.name}
         setCurrentSort('down')
     }
     const check18 = () => {
-        setPeople(
-            homeWorkReducer(initialPeople, {type: 'check', payload: 18})
-        ) // совершеннолетние
+                setPeople(
+            homeWorkReducer(initialPeople, {type: 'check', payload: 18}) // нет отрисовки
+        )
+        initialPeople.filter((el) => el.age >= 18)
+        // console.log(initialPeople.filter((el)=>el.age>=18 ))
+        
+        // совершеннолетние
         setCurrentSort('18')
     }
 

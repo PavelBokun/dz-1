@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SuperButton from "../hw04/common/c2-SuperButton/SuperButton";
 import { restoreState } from "../hw06/localStorage/localStorage";
 import s from "./Clock.module.css";
+import Button from "@mui/material/Button/Button";
 
 function Clock() {
   const [timerId, setTimerId] = useState<number | undefined>(undefined);
@@ -42,59 +43,76 @@ function Clock() {
     setShow(false);
   };
 
-  const stringTime = "date->time" || <br />; // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
-  const stringDate = "date->date" || <br />; // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
+  const stringTime = date.toLocaleTimeString()|| <br />; // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
+  const stringDate = date.toLocaleDateString() || <br />; // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
 
-  // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
-  const stringDay = "date->day" || <br />; // пишут студенты
-  const stringMonth = "date->month" || <br />; // пишут студенты
+  
+//   const options= { weekday: "long", month: "long" }// день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
+  const stringDay = new Intl.DateTimeFormat("en-US",{ weekday: "long"}).format(date)|| <br />; // пишут студенты
+  const stringMonth = new Intl.DateTimeFormat("en-US",{month: "long"}).format(date)|| <br />; // пишут студенты
 
   return (
-    <div className={s.clock}>
+    <div className={s. clockContainer}>
+ <div className={s.clock}>
       <div
         id={"hw9-watch"}
         className={s.watch}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
       >
-        <span id={"hw9-day"}>{stringDay}</span>,{" "}
-        <span id={"hw9-time"}>
+        <div><span id={"hw9-day"}>{stringDay}</span>,{" "}</div>
+        <div><span id={"hw9-time"}>
           <strong>{stringTime}</strong>
-        </span>
+        </span></div>
+              
       </div>
 
       <div id={"hw9-more"}>
         <div className={s.more}>
           {show ? (
-            <>
-              <span id={"hw9-month"}>{stringMonth}</span>,{" "}
-              <span id={"hw9-date"}>{stringDate}</span>
+            <><div><span id={"hw9-month"}>{stringMonth}</span>,{" "}</div>
+              <div><span id={"hw9-date"}>{stringDate}</span></div>
             </>
           ) : (
             <>
-              <br />
+                <br />
             </>
           )}
         </div>
       </div>
 
       <div className={s.buttonsContainer}>
-        <SuperButton
+      <Button variant="contained" id={"hw9-button-start"}
+          disabled={disabledBotton} // пишут студенты // задизэйблить если таймер запущен
+          onClick={start}>start</Button>
+      {/* <SuperButton
           id={"hw9-button-start"}
           disabled={disabledBotton} // пишут студенты // задизэйблить если таймер запущен
           onClick={start}
         >
           start
-        </SuperButton>
-        <SuperButton
+        </SuperButton> */}
+        {/* <SuperButton
+          id={"hw9-button-start"}
+          disabled={disabledBotton} // пишут студенты // задизэйблить если таймер запущен
+          onClick={start}
+        >
+          start
+        </SuperButton> */}
+        <Button variant="contained" id={"hw9-button-stop"}
+          disabled={!disabledBotton} // пишут студенты // задизэйблить если таймер не запущен
+          onClick={stop}>stop</Button>
+        {/* <SuperButton
           id={"hw9-button-stop"}
           disabled={!disabledBotton} // пишут студенты // задизэйблить если таймер не запущен
           onClick={stop}
         >
           stop
-        </SuperButton>
+        </SuperButton> */}
       </div>
     </div>
+    </div>
+   
   );
 }
 

@@ -4,7 +4,7 @@ interface IChangeLoadingAction {
     isLoading: boolean;
 }
 
-type LoadingActionType = IChangeLoadingAction;
+ export type LoadingActionType = IChangeLoadingAction;
 const initState = {
     isLoading: false,
 }

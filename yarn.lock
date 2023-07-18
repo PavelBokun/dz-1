@@ -7123,6 +7123,11 @@ loader-utils@^3.2.0:
   resolved "https://registry.npmjs.org/loader-utils/-/loader-utils-3.2.1.tgz"
   integrity sha512-ZvFw1KWS3GVyYBYb7qkmRM/WwL2TQQBxgCK62rlvm4WpVQ23Nb4tYjApUlfjrEGvOs7KHEsmyUn75OHZrJMWPw==
 
+loader@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/loader/-/loader-2.1.1.tgz#8848b12a3f00572e5a4249333ccdac79773fb402"
+  integrity sha512-Z6nHbyKiECMexVUmpIAVXp+f+8okRtfiMAQ9j0eTtImCghxSqQwrbeSiAyCYKBnfvRlgXLdQt0tPuaZmcBQzpw==
+
 locate-path@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/locate-path/-/locate-path-3.0.0.tgz"
@@ -8681,9 +8686,9 @@ react-transition-group@^4.4.5:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-react@18.2.0:
+react@^18.2.0:
   version "18.2.0"
-  resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
+  resolved "https://registry.yarnpkg.com/react/-/react-18.2.0.tgz#555bd98592883255fa00de14f1151a917b5d77d5"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
   dependencies:
     loose-envify "^1.1.0"
@@ -8867,6 +8872,11 @@ requires-port@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/requires-port/-/requires-port-1.0.0.tgz"
   integrity sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==
+
+resct@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/resct/-/resct-1.0.0.tgz#2368f3d67e7d8862285d8827e0ce47955cc1e9c5"
+  integrity sha512-iHAaS9oeGjcuYRZnxWuVeVQjqotfzeF0IQlnzX0aa3qK3lo4bIjLqrjf5IlbDkrvXF5I0Bz5nJS4g8DQ2rjkCA==
 
 resolve-cwd@^3.0.0:
   version "3.0.0"
@@ -9289,6 +9299,11 @@ spdy@^4.0.2:
     http-deceiver "^1.2.7"
     select-hose "^2.0.0"
     spdy-transport "^3.0.0"
+
+spiner@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/spiner/-/spiner-1.0.0.tgz#c16a850e42eeddac929963bd518e4cd2e3e8dc5b"
+  integrity sha512-d8QhkMpiEXhWzO2uWRSVb3hC+8hgV3LB+joIqzSeXOT9yroOOI6CX6ywxpNdUjk1aQfZvijSgkw//zCoyopD+w==
 
 sprintf-js@~1.0.2:
   version "1.0.3"

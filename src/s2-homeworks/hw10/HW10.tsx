@@ -7,6 +7,9 @@ import s2 from '../../s1-main/App.module.css'
 import {Loader} from './Loader'
 import w from './Loader.module.css'
 import Button from '@mui/material/Button/Button'
+import { Raiting } from './22'
+
+
 /*
 * 1 - в файле loadingReducer.ts дописать типы и логику
 * 2 - получить isLoading из редакса
@@ -48,7 +51,9 @@ const HW10 = () => {
                     // >
                     //    <span >Set loading...</span> 
                     // </SuperButton>
+                    
                 )}
+               <Raiting  />
             </div>
         </div>
     )

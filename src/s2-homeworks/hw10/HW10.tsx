@@ -5,9 +5,9 @@ import {loadingAC} from './bll/loadingReducer'
 import SuperButton from '../hw04/common/c2-SuperButton/SuperButton'
 import s2 from '../../s1-main/App.module.css'
 import {Loader} from './Loader'
-import w from './Loader.module.css'
+import s from './Loader.module.css'
 import Button from '@mui/material/Button/Button'
-import { Raiting } from './22'
+// import { Raiting } from './22'
 
 
 /*
@@ -35,7 +35,7 @@ const HW10 = () => {
             <div className={s2.hwTitle}>Homework #10</div>
 
             {/* <div className={s2.hw}> */}
-            <div className={w.center}>
+            <div className={s.center}>
                 {isLoading ? (
                     <div id={'hw10-loading'}>
                         <Loader/>
@@ -53,7 +53,7 @@ const HW10 = () => {
                     // </SuperButton>
                     
                 )}
-               <Raiting  />
+               {/* <Raiting  /> */}
             </div>
         </div>
     )

@@ -1,32 +1,32 @@
 .container {
-    display: flex;
+    /* display: flex;
   
     flex-direction: column;
 width: 800px;
  
     gap: 5px;
-    color: green;
+    color: green; */
 
 
 }
 
 .wrapper {
-    display: flex;
+    /* display: flex; */
     /* justify-content: center; */
  
-    align-items: center;
+    /* align-items: center;
     justify-content:space-between;
-    gap:25px;
+    gap:25px; */
 }
 
 .number {
-    display: inline-block;
+    /* display: inline-block;
     align-items: center;
    width: 100px;
-   margin-left: 110px;
+   margin-left: 110px; */
 
 }
 .new{
-    margin-left: 170px;
+    /* margin-left: 170px; */
     
 }

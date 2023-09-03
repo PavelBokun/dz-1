@@ -32,8 +32,7 @@ const HW7 = () => {
                             id={'hw7-super-select'}
                             options={arr}
                             value={value}
-                            onChangeOption={onChangeOption}
-                        />
+                            onChangeOption={onChangeOption}                                                      />
                     </div>
                     <div>
                         <SuperRadio

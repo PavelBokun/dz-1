@@ -6,12 +6,14 @@
 }
 
 .disabled {
+    width: 100px;
+    height: 30px;
 }
 
 .secondary {
     background-color: rgb(116, 220, 156);
     width: 100px;
-    height: 20px;
+    height: 30px;
     }
 
 .default {

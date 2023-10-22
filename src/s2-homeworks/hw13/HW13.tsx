@@ -7,7 +7,7 @@ import success200 from "./images/200.svg";
 import error400 from "./images/400.svg";
 import error500 from "./images/500.svg";
 import errorUnknown from "./images/error.svg";
-import { message0 } from './../hw01/HW1';
+import { message0 } from "./../hw01/HW1";
 
 /*
  * 1 - дописать функцию send
@@ -35,9 +35,8 @@ const HW13 = () => {
     axios
       .post(url, { success: x })
       .then((res) => {
-        console.log(res)
+        console.log(res);
         if (res.status === 200) {
-            
           setCode(res.data.status);
           setText(res.data.errorText);
           setImage(success200);
@@ -46,24 +45,26 @@ const HW13 = () => {
       })
       .catch((e) => {
         // console.log(e);
-        if (e.response.data === undefined) {
-        
-
-          setCode(e.code);
-          setText(e.message);
-          setImage(errorUnknown);
-        } else if (e.response.status === 400) {
-            console.log(e);
-          setCode(e.code);
-          setText(e.response.data.errorText);
-          setImage(error400);
-          setInfo(e.response.data.info);
-        } else if (e.response.status === 500) {
-            console.log(e);
-          setCode(e.code);
+        if (e.response.status === 500) {
+          console.log(e);
+          setCode("Ошибка" + e.response.status + "!");
           setText(e.response.data.errorText);
           setImage(error500);
           setInfo(e.response.data.info);
+        }
+        if (e.response.status === 400) {
+          console.log(e);
+          setCode("Ошибка" + e.response.status + "!");
+          setText(e.response.data.errorText);
+          setImage(error400);
+          setInfo(e.response.data.info);
+        } else if (e.response.data === undefined) {
+          console.log(e);
+          
+          setCode(e.code);
+          setText(e.message);
+          setImage(errorUnknown);
+          setInfo(e.name);
         }
       })
       .finally(() => {

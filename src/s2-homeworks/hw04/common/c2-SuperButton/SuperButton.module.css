@@ -9,13 +9,13 @@
 }
 
 .secondary {
-    background-color: blue;
+    background-color: rgb(116, 220, 156);
     width: 100px;
     height: 20px;
     }
 
 .default {
-    background-color: blue;
+    background-color: rgb(87, 87, 228);
     color:white;
 }
 

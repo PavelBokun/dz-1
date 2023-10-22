@@ -5,8 +5,10 @@ import SuperSelect from "../hw07/common/c5-SuperSelect/SuperSelect";
 import { useDispatch, useSelector } from "react-redux";
 import { ThemeState, changeThemeId } from "./bll/themeReducer";
 import { AppStoreType } from "../hw10/bll/store";
-
-
+import FormControl from "@mui/material/FormControl/FormControl";
+import InputLabel from "@mui/material/InputLabel/InputLabel";
+import Select from "@mui/material/Select/Select";
+import { MenuItem } from "@mui/material";
 
 /*
  * 1 - в файле themeReducer.ts написать нужные типы вместо any, дописать редьюсер
@@ -26,27 +28,27 @@ const themes: TypeThemes[] = [
 ];
 
 const HW12 = () => {
-
-    const themeId = useSelector((state: AppStoreType) => state.theme.themeId);
+  const themeId = useSelector((state: AppStoreType) => state.theme.themeId);
 
   const dispatch = useDispatch();
   const change = (id: number) => {
-    console.log(id)
+    console.log(id);
     dispatch(changeThemeId(id));
   };
 
   useEffect(() => {
-console.log(themeId)
+    console.log(themeId);
     document.documentElement.dataset.theme = themeId + "";
-    
   }, [themeId]);
-
+ const handleChange=(id:number)=>{
+    dispatch(changeThemeId(id))
+ }
   return (
     <div id={"hw12"}>
       <div id={"hw12-text"} className={s2.hwTitle}>
         Homework #12
       </div>
-
+      
       <div className={s2.hw}>
         <SuperSelect
           id={"hw12-select-theme"}
@@ -57,7 +59,6 @@ console.log(themeId)
           value={themeId}
         />
       </div>
-      
     </div>
   );
 };
